@@ -1,0 +1,30 @@
+server:
+  port: 8086
+
+
+dubbo:
+  application:
+    name: "user-api"
+  # 注册中心
+  registry:
+    # 指定注册中心为redis
+    protocol: redis
+    # root是随便写的 后面跟的是密码 和redis host以及port
+    address: root:YX19980904@192.144.220.234:6379
+    parameters:
+      namespace: dubbo-rpc
+  # rpc之间的协议 默认dubbo
+  protocol:
+    name: dubbo
+    port: -1
+  scan:
+    base-packages:
+      - com.cqnews.rpc.service
+  # 服务降级
+  consumer:
+    mock: "return null"
+
+# nacos 配置中心
+nacos:
+  discovery:
+    server-addr: 192.144.220.234:8848

@@ -1,0 +1,6 @@
+com\cqnews\rpc\service\impl\OrderServiceImpl.class
+com\cqnews\rpc\custom\annotation\CustomService.class
+com\cqnews\rpc\controller\TestController.class
+com\cqnews\rpc\filter\AuthFilter.class
+com\cqnews\rpc\custom\CustomInstanitationAwareBeanPostProcessor.class
+com\cqnews\rpc\OrderApplication8099.class

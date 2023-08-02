@@ -1,0 +1,26 @@
+server:
+  port: 7896
+
+
+dubbo:
+  application:
+    name: "mq-service"
+  # 注册地址
+  registry:
+    address: nacos://192.144.220.234:8848
+    parameters:
+      namespace: dubbo-rpc
+    username: nacos
+    password: nacos
+  # rpc之间的协议 默认dubbo
+  protocol:
+    name: dubbo
+    port: -1
+  # 服务降级
+  consumer:
+    mock: "return null"
+
+# nacos 配置中心
+nacos:
+  discovery:
+    server-addr: 192.144.220.234:8848

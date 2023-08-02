@@ -1,0 +1,5 @@
+com\cqnews\rpc\user\resp\UserInfo.class
+com\cqnews\rpc\pay\PayService.class
+com\cqnews\rpc\order\OrderService.class
+com\cqnews\rpc\order\resp\OrderInfo.class
+com\cqnews\rpc\user\UserService.class

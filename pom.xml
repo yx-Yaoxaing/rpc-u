@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.cqnews.rpc</groupId>
+    <artifactId>dubbo-rpc</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <!--公共接口-->
+        <module>rpc-interface</module>
+        <!--订单-->
+        <module>order</module>
+        <!--用户-->
+        <module>user</module>
+        <module>rpc-common</module>
+        <!--dubbo 例子-->
+        <module>dubbo-example</module>
+        <!--序列化-->
+        <module>dubbo-serialize</module>
+        <!--通信-->
+        <module>dubbo-comm</module>
+        <module>mq</module>
+        <module>mq/mq-rpc-api</module>
+        <module>mq/mq-server</module>
+        <module>dubbo-register</module>
+        <module>dubbo-register/dubbo-register-zk</module>
+        <module>dubbo-remoting</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring-boot.version>2.7.10</spring-boot.version>
+        <nacos-version>0.2.7</nacos-version>
+        <dubbo-version>2.7.10</dubbo-version>
+        <lombok-version>1.18.26</lombok-version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--springboot 版本管理-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--nacos版本管理-->
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>nacos-discovery-spring-boot-starter</artifactId>
+                <version>${nacos-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--dubbo start-->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--dubbo end-->
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok-version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>

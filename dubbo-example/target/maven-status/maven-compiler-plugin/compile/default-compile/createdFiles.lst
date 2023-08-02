@@ -1,0 +1,5 @@
+com\cqnews\rpc\service\UserService.class
+com\cqnews\rpc\provider\Application.class
+com\cqnews\rpc\consumer\ConsumerApplication.class
+com\cqnews\rpc\service\impl\UserServiceImpl.class
+com\cqnews\rpc\service\User.class
