@@ -25,6 +25,8 @@ public class NettyRpcTest {
 
         ZkServiceRegister zkServiceRegister = new ZkServiceRegister();
         zkServiceRegister.register("com.cqnews.rpc.provider.UserService","127.0.0.1",8580);
+        zkServiceRegister.register("com.cqnews.rpc.service.BlogService","127.0.0.1",8580);
+
 
         NettyRPCServer nettyRPCServer = new NettyRPCServer(serviceProvider);
         nettyRPCServer.init(8580);

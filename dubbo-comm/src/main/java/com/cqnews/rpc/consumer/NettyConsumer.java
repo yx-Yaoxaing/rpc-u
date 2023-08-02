@@ -2,7 +2,7 @@ package com.cqnews.rpc.consumer;
 
 import com.cqnews.rpc.provider.User;
 import com.cqnews.rpc.provider.UserService;
-import com.cqnews.rpc.register.local.LocalRegister;
+import com.cqnews.rpc.service.BlogService;
 
 /**
  * @description:
@@ -16,6 +16,8 @@ public class NettyConsumer {
         UserService userService = nettyClientProxy.getProxy(UserService.class);
         User user = userService.getUserByUserId(1L);
         System.out.println("user:"+user);
+        BlogService blogService = nettyClientProxy.getProxy(BlogService.class);
+        System.out.println(blogService.findId(1L));
     }
 
 }
